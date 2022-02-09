@@ -1,3 +1,42 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite = game.ask("Am I a carnivore? Yes(A) or No (B)")
+    if (controller.A.isPressed()) {
+        mySprite = game.ask("Do I live on land? Yes(A) or No (B)")
+        if (controller.B.isPressed()) {
+            mySprite = game.ask("Do I have four legs? Yes (A) or No (B)")
+            if (controller.A.isPressed()) {
+                mySprite = game.ask("Am I a crocodile? Yes(A) or No (B)")
+            } else {
+                mySprite = game.ask("Am I a stingray? Yes(A) or No (B)")
+            }
+        } else {
+            mySprite = game.ask("Can I fly? Yes(A) or No (B)")
+            if (controller.B.isPressed()) {
+                mySprite = game.ask("Am I a tiger? Yes(A) or No (B)")
+            } else {
+                mySprite = game.ask("Am I a vulture? Yes(A) or No (B)")
+            }
+        }
+    } else {
+        mySprite = game.ask("Do I have 4 legs? Yes(A) or No (B)")
+        if (controller.B.isPressed()) {
+            mySprite = game.ask("Do I have fur? Yes(A) or No(B)")
+            if (controller.A.isPressed()) {
+                mySprite = game.ask("Am I a monkey? Yes(A) or No(B)")
+            } else {
+                mySprite = game.ask("Can I swim? Yes(A) or No(B)")
+                if (controller.B.isPressed()) {
+                    mySprite = game.ask("Am I a spider? Yes(A) or No(B)")
+                } else {
+                    mySprite = game.ask("Am I a duck? Yes(A) or No(B)")
+                }
+            }
+        } else {
+            mySprite = game.ask("Am I a hippo? Yes(A) or No(B)")
+        }
+    }
+})
+let mySprite = false
 scene.setBackgroundColor(6)
 let Vulture = sprites.create(img`
     ................................
