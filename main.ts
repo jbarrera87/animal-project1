@@ -235,6 +235,9 @@ function spriteIntro () {
     game.showLongText("Welcome to Animal Akinator. To start, think of an animal out of the list below, but don't tell me!", DialogLayout.Top)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    whatAnimalAmI()
+})
+function whatAnimalAmI () {
     mySprite = game.ask("Am I a carnivore? yes(A) no(B)")
     if (controller.A.isPressed()) {
         mySprite = game.ask("Do I live on land? Yes(A) or No (B)")
@@ -242,15 +245,51 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite = game.ask("Do I have four legs? Yes (A) or No (B)")
             if (controller.A.isPressed()) {
                 mySprite = game.ask("Am I a crocodile? Yes(A) or No (B)")
+                if (controller.A.isPressed()) {
+                    Duck.destroy(effects.spray, 500)
+                    Hippo.destroy(effects.spray, 500)
+                    Monkey.destroy(effects.spray, 500)
+                    Spider.destroy(effects.spray, 500)
+                    Stingray.destroy(effects.spray, 500)
+                    tiger.destroy(effects.spray, 500)
+                    Vulture.destroy(effects.spray, 500)
+                }
             } else {
                 mySprite = game.ask("Am I a stingray? Yes(A) or No (B)")
+                if (controller.A.isPressed()) {
+                    Duck.destroy(effects.spray, 500)
+                    Hippo.destroy(effects.spray, 500)
+                    Monkey.destroy(effects.spray, 500)
+                    Spider.destroy(effects.spray, 500)
+                    tiger.destroy(effects.spray, 500)
+                    Vulture.destroy(effects.spray, 500)
+                    Crocodile.destroy(effects.spray, 500)
+                }
             }
         } else {
             mySprite = game.ask("Can I fly? Yes(A) or No (B)")
             if (controller.B.isPressed()) {
                 mySprite = game.ask("Am I a tiger? Yes(A) or No (B)")
+                if (controller.A.isPressed()) {
+                    Duck.destroy(effects.spray, 500)
+                    Hippo.destroy(effects.spray, 500)
+                    Monkey.destroy(effects.spray, 500)
+                    Spider.destroy(effects.spray, 500)
+                    Stingray.destroy(effects.spray, 500)
+                    Vulture.destroy(effects.spray, 500)
+                    Crocodile.destroy(effects.spray, 500)
+                }
             } else {
                 mySprite = game.ask("Am I a vulture? Yes(A) or No (B)")
+                if (controller.A.isPressed()) {
+                    Duck.destroy(effects.spray, 500)
+                    Hippo.destroy(effects.spray, 500)
+                    Monkey.destroy(effects.spray, 500)
+                    Spider.destroy(effects.spray, 500)
+                    tiger.destroy(effects.spray, 500)
+                    Stingray.destroy(effects.spray, 500)
+                    Crocodile.destroy(effects.spray, 500)
+                }
             }
         }
     } else {
@@ -259,19 +298,55 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite = game.ask("Do I have fur? Yes(A) or No(B)")
             if (controller.A.isPressed()) {
                 mySprite = game.ask("Am I a monkey? Yes(A) or No(B)")
+                if (controller.A.isPressed()) {
+                    Duck.destroy(effects.spray, 500)
+                    Hippo.destroy(effects.spray, 500)
+                    Stingray.destroy(effects.spray, 500)
+                    Spider.destroy(effects.spray, 500)
+                    tiger.destroy(effects.spray, 500)
+                    Vulture.destroy(effects.spray, 500)
+                    Crocodile.destroy(effects.spray, 500)
+                }
             } else {
                 mySprite = game.ask("Can I swim? Yes(A) or No(B)")
                 if (controller.B.isPressed()) {
                     mySprite = game.ask("Am I a spider? Yes(A) or No(B)")
+                    if (controller.A.isPressed()) {
+                        Duck.destroy(effects.spray, 500)
+                        Hippo.destroy(effects.spray, 500)
+                        Monkey.destroy(effects.spray, 500)
+                        Stingray.destroy(effects.spray, 500)
+                        tiger.destroy(effects.spray, 500)
+                        Vulture.destroy(effects.spray, 500)
+                        Crocodile.destroy(effects.spray, 500)
+                    }
                 } else {
                     mySprite = game.ask("Am I a duck? Yes(A) or No(B)")
+                    if (controller.A.isPressed()) {
+                        Spider.destroy(effects.spray, 500)
+                        Hippo.destroy(effects.spray, 500)
+                        Monkey.destroy(effects.spray, 500)
+                        Stingray.destroy(effects.spray, 500)
+                        tiger.destroy(effects.spray, 500)
+                        Vulture.destroy(effects.spray, 500)
+                        Crocodile.destroy(effects.spray, 500)
+                    }
                 }
             }
         } else {
             mySprite = game.ask("Am I a hippo? Yes(A) or No(B)")
+            if (controller.A.isPressed()) {
+                Duck.destroy(effects.spray, 500)
+                Spider.destroy(effects.spray, 500)
+                Monkey.destroy(effects.spray, 500)
+                Stingray.destroy(effects.spray, 500)
+                tiger.destroy(effects.spray, 500)
+                Vulture.destroy(effects.spray, 500)
+                Crocodile.destroy(effects.spray, 500)
+            }
         }
     }
-})
+}
 let mySprite = false
 let tiger: Sprite = null
 let Hippo: Sprite = null
