@@ -253,6 +253,11 @@ function whatAnimalAmI () {
                     Stingray.destroy(effects.spray, 500)
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
+                    Crocodile.sayText(text_list[5])
+                    pause(2000)
+                    Crocodile.destroy()
+                    pause(1000)
+                    spriteIntro()
                 } else {
                     while (controller.B.isPressed()) {
                         game.reset()
@@ -268,6 +273,11 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                    Stingray.sayText(text_list[4])
+                    pause(2000)
+                    Stingray.destroy()
+                    pause(1000)
+                    spriteIntro()
                 } else {
                     while (controller.B.isPressed()) {
                         game.reset()
@@ -286,6 +296,11 @@ function whatAnimalAmI () {
                     Stingray.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                    tiger.sayText(text_list[2])
+                    pause(2000)
+                    tiger.destroy()
+                    pause(1000)
+                    spriteIntro()
                 } else {
                     while (controller.B.isPressed()) {
                         game.reset()
@@ -301,6 +316,11 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Stingray.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                    Vulture.sayText(text_list[1])
+                    pause(2000)
+                    Vulture.destroy()
+                    pause(1000)
+                    spriteIntro()
                 } else {
                     while (controller.B.isPressed()) {
                         game.reset()
@@ -322,6 +342,11 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                    Monkey.sayText(text_list[0])
+                    pause(2000)
+                    Monkey.destroy()
+                    pause(1000)
+                    spriteIntro()
                 } else {
                     while (controller.B.isPressed()) {
                         game.reset()
@@ -339,6 +364,11 @@ function whatAnimalAmI () {
                         tiger.destroy(effects.spray, 500)
                         Vulture.destroy(effects.spray, 500)
                         Crocodile.destroy(effects.spray, 500)
+                        Spider.sayText(text_list[6])
+                        pause(2000)
+                        Spider.destroy()
+                        pause(1000)
+                        spriteIntro()
                     } else {
                         while (controller.B.isPressed()) {
                             game.reset()
@@ -354,6 +384,11 @@ function whatAnimalAmI () {
                         tiger.destroy(effects.spray, 500)
                         Vulture.destroy(effects.spray, 500)
                         Crocodile.destroy(effects.spray, 500)
+                        Duck.sayText(text_list[3])
+                        pause(2000)
+                        Duck.destroy()
+                        pause(1000)
+                        spriteIntro()
                     } else {
                         while (controller.B.isPressed()) {
                             game.reset()
@@ -371,6 +406,11 @@ function whatAnimalAmI () {
                 tiger.destroy(effects.spray, 500)
                 Vulture.destroy(effects.spray, 500)
                 Crocodile.destroy(effects.spray, 500)
+                Hippo.sayText(text_list[7])
+                pause(2000)
+                Hippo.destroy()
+                pause(1000)
+                spriteIntro()
             } else {
                 while (controller.B.isPressed()) {
                     game.reset()
@@ -388,4 +428,15 @@ let Stingray: Sprite = null
 let Duck: Sprite = null
 let Monkey: Sprite = null
 let Vulture: Sprite = null
+let text_list: string[] = []
 spriteIntro()
+text_list = [
+"Monkey!",
+"Vulture!",
+"Tiger!",
+"Duck!",
+"Stingray!",
+"Crocodile!",
+"Spider!",
+"Hippo!"
+]
