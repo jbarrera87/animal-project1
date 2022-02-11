@@ -253,6 +253,10 @@ function whatAnimalAmI () {
                     Stingray.destroy(effects.spray, 500)
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
+                } else {
+                    while (controller.B.isPressed()) {
+                        game.reset()
+                    }
                 }
             } else {
                 mySprite = game.ask("Am I a stingray? Yes(A) or No (B)")
@@ -264,6 +268,10 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                } else {
+                    while (controller.B.isPressed()) {
+                        game.reset()
+                    }
                 }
             }
         } else {
@@ -278,6 +286,10 @@ function whatAnimalAmI () {
                     Stingray.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                } else {
+                    while (controller.B.isPressed()) {
+                        game.reset()
+                    }
                 }
             } else {
                 mySprite = game.ask("Am I a vulture? Yes(A) or No (B)")
@@ -289,6 +301,10 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Stingray.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                } else {
+                    while (controller.B.isPressed()) {
+                        game.reset()
+                    }
                 }
             }
         }
@@ -306,6 +322,10 @@ function whatAnimalAmI () {
                     tiger.destroy(effects.spray, 500)
                     Vulture.destroy(effects.spray, 500)
                     Crocodile.destroy(effects.spray, 500)
+                } else {
+                    while (controller.B.isPressed()) {
+                        game.reset()
+                    }
                 }
             } else {
                 mySprite = game.ask("Can I swim? Yes(A) or No(B)")
@@ -319,6 +339,10 @@ function whatAnimalAmI () {
                         tiger.destroy(effects.spray, 500)
                         Vulture.destroy(effects.spray, 500)
                         Crocodile.destroy(effects.spray, 500)
+                    } else {
+                        while (controller.B.isPressed()) {
+                            game.reset()
+                        }
                     }
                 } else {
                     mySprite = game.ask("Am I a duck? Yes(A) or No(B)")
@@ -330,6 +354,10 @@ function whatAnimalAmI () {
                         tiger.destroy(effects.spray, 500)
                         Vulture.destroy(effects.spray, 500)
                         Crocodile.destroy(effects.spray, 500)
+                    } else {
+                        while (controller.B.isPressed()) {
+                            game.reset()
+                        }
                     }
                 }
             }
@@ -343,6 +371,10 @@ function whatAnimalAmI () {
                 tiger.destroy(effects.spray, 500)
                 Vulture.destroy(effects.spray, 500)
                 Crocodile.destroy(effects.spray, 500)
+            } else {
+                while (controller.B.isPressed()) {
+                    game.reset()
+                }
             }
         }
     }
